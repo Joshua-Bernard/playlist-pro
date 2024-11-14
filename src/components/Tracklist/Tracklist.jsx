@@ -4,7 +4,6 @@ import Track from '../Track/Track';
 export default function Tracklist({ songs }) {
   return (
     <>
-      <h3>Hello Tracklist!</h3>
       {songs.map((song, index) => (
         <Track song={song} key={index} />
       ))}
