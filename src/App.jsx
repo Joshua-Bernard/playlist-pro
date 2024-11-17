@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import SearchBar from './components/SearchBar/SearchBar';
 import SearchResults from './components/SearchResults/SearchResults';
 import styles from './App.module.css';
 function App() {
@@ -103,6 +104,7 @@ function App() {
 
   return (
     <div className={styles.gridContainer}>
+      <SearchBar />
       <SearchResults songs={songs} />\
     </div>
   );
