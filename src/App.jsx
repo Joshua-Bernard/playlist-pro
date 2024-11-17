@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import SearchResults from './components/SearchResults/SearchResults';
+import styles from './App.module.css';
 function App() {
   const [songs, setSongs] = useState([
     {
@@ -101,9 +102,9 @@ function App() {
   ]);
 
   return (
-    <>
-      <SearchResults songs={songs} />
-    </>
+    <div className={styles.gridContainer}>
+      <SearchResults songs={songs} />\
+    </div>
   );
 }
 

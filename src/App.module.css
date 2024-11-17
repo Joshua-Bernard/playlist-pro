@@ -1,0 +1,15 @@
+.gridContainer {
+  margin: 0 150px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(5, 1fr);
+  row-gap: 25px;
+  column-gap: 500px;
+  grid-template-areas:
+    'title .'
+    'searchTitle playlistTitle'
+    'searchInput PlaylistNameInput'
+    'searchResults Playlist'
+    '. saveButton';
+
+}
