@@ -12,7 +12,3 @@ export default function SearchBar() {
     </>
   );
 }
-
-
-import SearchBar from './components/SearchBar/SearchBar';
-<SearchBar />
