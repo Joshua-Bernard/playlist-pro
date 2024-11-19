@@ -1,3 +1,11 @@
+:root{
+   --accent: #40DD8F;
+   --background:#FEFCF6;
+   --secondaryBackground:#F6F4EE;
+   --primary:#EEBD1B;
+   --Secondary:#7BAFE0;
+}
+
 .gridContainer {
   margin: 0 150px;
   display: grid;
