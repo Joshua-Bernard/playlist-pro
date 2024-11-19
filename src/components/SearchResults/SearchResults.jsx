@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
-
+import styles from './SearchResults.module.css';
 import Tracklist from '../Tracklist/Tracklist';
 export default function SearchResults({ songs }) {
   return (
-    <>
+    <div className={styles.container}>
       <Tracklist songs={songs} />
-    </>
+      </div>
   );
 }
 
