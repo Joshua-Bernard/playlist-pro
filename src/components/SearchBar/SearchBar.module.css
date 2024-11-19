@@ -1,0 +1,7 @@
+.searchTitle {
+    grid-area: searchTitle;
+}
+
+.searchInput {
+    grid-area: searchInput;
+}
