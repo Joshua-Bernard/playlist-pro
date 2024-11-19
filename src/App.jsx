@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import SearchBar from './components/SearchBar/SearchBar';
 import SearchResults from './components/SearchResults/SearchResults';
+import Playlist from './components/Playlist/Playlist';
 import styles from './App.module.css';
 function App() {
   const [songs, setSongs] = useState([
@@ -104,8 +105,10 @@ function App() {
 
   return (
     <div className={styles.gridContainer}>
+      <h1 className={styles.title}>Playlist Pro</h1>
       <SearchBar />
-      <SearchResults songs={songs} />\
+      <SearchResults songs={songs} />
+      <Playlist></Playlist>
     </div>
   );
 }

@@ -2,7 +2,7 @@
   margin: 0 150px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-rows: 93px 70px 60px 650px 150px;
   row-gap: 25px;
   column-gap: 500px;
   grid-template-areas:
@@ -12,4 +12,8 @@
     'searchResults Playlist'
     '. saveButton';
 
+}
+
+.title {
+  grid-area: title;
 }

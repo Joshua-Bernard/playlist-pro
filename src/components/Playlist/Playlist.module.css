@@ -1,0 +1,12 @@
+.container {
+    grid-area: Playlist;
+}
+
+.playlistNameInput{
+    grid-area:PlaylistNameInput;
+}
+
+.playlistTitle{
+    grid-area: playlistTitle;
+}
+
