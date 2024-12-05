@@ -2,12 +2,3 @@
     grid-area: Playlist;
     background-color: var(--secondaryBackground);
 }
-
-.playlistNameInput{
-    grid-area:PlaylistNameInput;
-}
-
-.playlistTitle{
-    grid-area: playlistTitle;
-}
-

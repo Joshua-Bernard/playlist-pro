@@ -1,0 +1,9 @@
+.playlistTitle {
+grid-area: playlistTitle;
+}
+
+.playlistName{
+  grid-area: PlaylistNameInput;
+  background-color: var(--secondaryBackground);
+
+}
