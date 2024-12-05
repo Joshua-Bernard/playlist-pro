@@ -1,5 +1,6 @@
 .container {
     grid-area: Playlist;
+    background-color: var(--secondaryBackground);
 }
 
 .playlistNameInput{

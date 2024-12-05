@@ -3,34 +3,64 @@
 body {
   font-family: 'Roboto Mono';
   font-weight: 400;
+  background-color: var(--background);
+  color: var(--Text);
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-family: 'Noto Sans';
-  font-weight: 700;
+  font-weight: 300;
 }
 
-html {font-size: 100%;} /* 16px */
+html {
+  font-size: 100%;
+}
 
-h1 {font-size: 4.210rem; /* 67.36px */}
+/* 16px */
 
-h2 {font-size: 3.158rem; /* 50.56px */}
+h1 {
+  font-size: 4.210rem;
+  /* 67.36px */
+}
 
-h3 {font-size: 2.369rem; /* 37.92px */}
+h2 {
+  font-size: 3.158rem;
+  /* 50.56px */
+}
 
-h4 {font-size: 1.777rem; /* 28.48px */}
+h3 {
+  font-size: 2.369rem;
+  /* 37.92px */
+}
 
-h5 {font-size: 1.333rem; /* 21.28px */}
+h4 {
+  font-size: 1.777rem;
+  /* 28.48px */
+}
 
-small {font-size: 0.750rem; /* 12px */}
+h5 {
+  font-size: 1.333rem;
+  /* 21.28px */
+}
+
+small {
+  font-size: 0.750rem;
+  /* 12px */
+}
 
 
-:root{
-   --accent: #40DD8F;
-   --background:#FEFCF6;
-   --secondaryBackground:#F6F4EE;
-   --primary:#EEBD1B;
-   --Secondary:#7BAFE0;
+:root {
+  --accent: #40DD8F;
+  --background: #FEFCF6;
+  --secondaryBackground: #F6F4EE;
+  --primary: #EEBD1B;
+  --Secondary: #7BAFE0;
+  --Text: #171002;
+  --WarningRed: #EF3E36;
 }
 
 .gridContainer {
@@ -52,4 +82,3 @@ small {font-size: 0.750rem; /* 12px */}
 .title {
   grid-area: title;
 }
-
