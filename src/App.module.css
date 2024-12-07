@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Noto%20Sans:300|Roboto%20Mono:400');
 
-body {
+body,
+input {
   font-family: 'Roboto Mono';
   font-weight: 400;
   background-color: var(--background);
@@ -81,4 +82,50 @@ small {
 
 .title {
   grid-area: title;
+}
+
+/* Text inputs */
+
+input {
+  margin-top: 20px;
+  font-size: 1rem;
+  border: none;
+  padding: 20px;
+}
+
+input:hover {
+  border: var(--accent) solid 1px;
+}
+
+input:focus {
+  border: var(--accent) solid 2px;
+}
+
+input:focus-visible {
+  outline: none;
+}
+
+/* Target the scrollbar */
+::-webkit-scrollbar {
+  /* width: 10px; Set the width of the scrollbar */
+}
+
+/* Target the track (the background of the scrollbar) */
+::-webkit-scrollbar-track {
+  background: var(--secondaryBackground);
+  /* Set the track color */
+}
+
+/* Target the thumb (the draggable part of the scrollbar) */
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  /* Set the thumb color */
+  border-radius: 5px;
+  /* Add some rounding to the thumb */
+}
+
+/* Target the scrollbar */
+* {
+  scrollbar-color: var(--accent) var(--secondaryBackground);
+  /* Set thumb color and track color */
 }
