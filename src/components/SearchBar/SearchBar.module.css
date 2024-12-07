@@ -1,8 +1,28 @@
 .searchTitle {
-    grid-area: searchTitle;
+  grid-area: searchTitle;
 }
 
 .searchInput {
-    grid-area: searchInput;
-    background-color: var(--secondaryBackground);
+  width: 100%;
+  background-color: var(--secondaryBackground);
+}
+
+.searchInputContainer {
+  background-color: var(--secondaryBackground);
+  grid-area: searchInput;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.searchInput {
+  padding-right: 40px;
+}
+
+.searchIcon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
 }
