@@ -85,6 +85,29 @@ small {
   grid-area: title;
 }
 
+
+
+
+
+@supports (-webkit-background-clip: text) {
+
+  /* Only for brousers that support it */
+  .titleHighlight {
+    background: linear-gradient(to right, var(--primary), var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    text-fill-color: transparent;
+  }
+}
+
+.titleHighlight {
+  color: var(--primary);
+  /* Fallback */
+}
+
 /* Text inputs */
 
 input {

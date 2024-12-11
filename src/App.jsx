@@ -107,7 +107,7 @@ function App() {
 
   return (
     <div className={styles.gridContainer}>
-      <h1 className={styles.title}>Playlist Pro</h1>
+      <h1 className={styles.title}>Playlist <span className={styles.titleHighlight}>Pro</span></h1>
       <SearchBar />
       <SearchResults songs={songs} />
       <PlaylistName/>
