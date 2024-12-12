@@ -11,7 +11,7 @@
 
 .trackButton{
     background: none;
-    font-size: 50px;
+    font-size: 60px;
     font-weight: 300;
     padding: 0px;
     font-family: "Roboto Mono", serif;
@@ -26,4 +26,11 @@
 .trackRemove{
     color: var(--WarningRed);
 }
-    
+
+.artist{
+    color: var(--Secondary);
+}
+
+hr {
+    border-color: var(--Secondary);
+}

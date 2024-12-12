@@ -6,14 +6,13 @@ export default function Track({ song }) {
       <div className={styles.Track}>
         <div className={styles.TrackInfo}>
           <p>{song.name}</p>
-          <p>{song.artist}</p>
+          <p className={styles.artist}>{song.artist}</p>
         </div>
         <div className={styles.trackButtonContainer}>
           <input className={`${styles.trackButton} ${song.isInPlaylist ? styles.trackRemove : styles.trackAdd}`} type="button" value={song.isInPlaylist ? "-" : "+"} />
-
         </div>
-        <hr></hr>
       </div>
+      <hr/>
     </>
   );
 }
