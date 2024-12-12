@@ -9,7 +9,7 @@ export default function Track({ song }) {
           <p>{song.artist}</p>
         </div>
         <div className={styles.trackButtonContainer}>
-          <input className={styles.trackButton} type="button" value={song.isInPlaylist ? "-" : "+"} />
+          <input className={`${styles.trackButton} ${song.isInPlaylist ? styles.trackRemove : styles.trackAdd}`} type="button" value={song.isInPlaylist ? "-" : "+"} />
 
         </div>
         <hr></hr>
