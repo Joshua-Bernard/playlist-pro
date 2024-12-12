@@ -11,3 +11,11 @@
   background-color: var(--secondaryBackground);
 
 }
+
+.playlistName:hover {
+  border: var(--accent) solid 1px;
+}
+
+.playlistName:focus {
+  border: var(--accent) solid 2px;
+}
