@@ -85,10 +85,6 @@ small {
   grid-area: title;
 }
 
-
-
-
-
 @supports (-webkit-background-clip: text) {
 
   /* Only for brousers that support it */
@@ -117,13 +113,6 @@ input {
   padding: 20px;
 }
 
-input:hover {
-  border: var(--accent) solid 1px;
-}
-
-input:focus {
-  border: var(--accent) solid 2px;
-}
 
 input:focus-visible {
   outline: none;
