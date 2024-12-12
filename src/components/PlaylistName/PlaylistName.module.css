@@ -1,8 +1,12 @@
 .playlistTitle {
-grid-area: playlistTitle;
+  grid-area: playlistTitle;
 }
 
-.playlistName{
+.playlistName {
+  font-family: "Roboto Mono", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: var(--Text);
   grid-area: PlaylistNameInput;
   background-color: var(--secondaryBackground);
 
