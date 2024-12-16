@@ -137,6 +137,11 @@ function App() {
       isInPlaylist: true,
     },
   ]);
+  const [playlistName, setPlaylistName] = useState('My new Playlist');
+
+  function handlePlaylistNameChange (e) {
+    setPlaylistName(e.target.value);
+  }
 
   return (
     <div className={styles.gridContainer}>
@@ -145,7 +150,7 @@ function App() {
       </h1>
       <SearchBar />
       <SearchResults songs={songs} />
-      <PlaylistName />
+      <PlaylistName handlePlaylistNameChange={handlePlaylistNameChange} playlistName={playlistName} />
       <Playlist playlist={playlist} />
     </div>
   );
