@@ -137,10 +137,16 @@ function App() {
       isInPlaylist: true,
     },
   ]);
+
+  const [search, setSearch] = useState('');
+
   const [playlistName, setPlaylistName] = useState('My new Playlist');
 
-  function handlePlaylistNameChange (e) {
+  function handlePlaylistNameChange(e) {
     setPlaylistName(e.target.value);
+  }
+  function handleSearchBarChange(e) {
+    setSearch(e.target.value);
   }
 
   return (
@@ -148,9 +154,12 @@ function App() {
       <h1 className={styles.title}>
         Playlist <span className={styles.titleHighlight}>Pro</span>
       </h1>
-      <SearchBar />
+      <SearchBar handleSearchBarChange={handleSearchBarChange} search={search}/>
       <SearchResults songs={songs} />
-      <PlaylistName handlePlaylistNameChange={handlePlaylistNameChange} playlistName={playlistName} />
+      <PlaylistName
+        handlePlaylistNameChange={handlePlaylistNameChange}
+        playlistName={playlistName}
+      />
       <Playlist playlist={playlist} />
     </div>
   );
