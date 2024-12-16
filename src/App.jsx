@@ -133,6 +133,37 @@ function App() {
     setSearch(e.target.value);
   }
 
+  function handleAddTrack(newTrack) {
+    const trackIndexInPlaylist = playlist.findIndex(
+      (track) => track.id === newTrack.id
+    );
+
+    if (trackIndexInPlaylist === -1) {
+      setPlaylist((prevPlaylist) => [
+        ...prevPlaylist,
+        { ...newTrack, isInPlaylist: true },
+      ]);
+      setSongs((prevSongs) =>
+        prevSongs.map((song) =>
+          song.id === newTrack.id ? { ...song, isInPlaylist: true } : song
+        )
+      );
+    } else {
+      console.log('Track already exists in playlist');
+    }
+  }
+
+  function handleRemoveTrack(trackToRemove) {
+    setPlaylist((prevPlaylist) =>
+      prevPlaylist.filter((track) => track.id !== trackToRemove.id)
+    );
+    setSongs((prevSongs) =>
+      prevSongs.map((song) =>
+        song.id === trackToRemove.id ? { ...song, isInPlaylist: false } : song
+      )
+    );
+  }
+
   return (
     <div className={styles.gridContainer}>
       <h1 className={styles.title}>
@@ -142,12 +173,12 @@ function App() {
         handleSearchBarChange={handleSearchBarChange}
         search={search}
       />
-      <SearchResults songs={songs} />
+      <SearchResults songs={songs} onAdd={handleAddTrack} />
       <PlaylistName
         handlePlaylistNameChange={handlePlaylistNameChange}
         playlistName={playlistName}
       />
-      <Playlist playlist={playlist} />
+      <Playlist playlist={playlist} onRemove={handleRemoveTrack} />
     </div>
   );
 }

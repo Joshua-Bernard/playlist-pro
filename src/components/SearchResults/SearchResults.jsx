@@ -1,18 +1,17 @@
 import PropTypes from 'prop-types';
 import styles from './SearchResults.module.css';
 import Tracklist from '../Tracklist/Tracklist';
-export default function SearchResults({ songs }) {
+export default function SearchResults({ songs, onAdd }) {
   const songsWithNewKey = songs.map((song) => ({
     ...song,
     isInPlaylist: false,
-  })
-);
+  }));
 
-console.log(songsWithNewKey);
+  console.log(songsWithNewKey);
 
   return (
     <div className={styles.container}>
-      <Tracklist songs={songsWithNewKey} />
+      <Tracklist songs={songsWithNewKey} onAdd={onAdd} />
     </div>
   );
 }
@@ -26,4 +25,5 @@ SearchResults.propTypes = {
       id: PropTypes.number.isRequired,
     })
   ).isRequired,
+  onAdd: PropTypes.func.isRequired,
 };

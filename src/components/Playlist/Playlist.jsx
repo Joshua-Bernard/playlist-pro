@@ -2,11 +2,11 @@ import styles from './Playlist.module.css';
 import Tracklist from '../Tracklist/Tracklist';
 import PropTypes from 'prop-types';
 
-export default function Playlist({ playlist }) {
+export default function Playlist({ playlist, onRemove }) {
   return (
     <>
       <div className={styles.container}>
-        <Tracklist songs={playlist} />
+        <Tracklist songs={playlist} onRemove={onRemove} />
       </div>
     </>
   );
@@ -22,4 +22,5 @@ Playlist.propTypes = {
       isInPlaylist: PropTypes.bool.isRequired,
     })
   ).isRequired,
+  onRemove: PropTypes.func.isRequired,
 };

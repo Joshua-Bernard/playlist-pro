@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import styles from './Track.module.css';
-export default function Track({ song }) {
+export default function Track({ song, onAdd, onRemove  }) {
   return (
     <>
       <div className={styles.Track}>
@@ -9,10 +9,18 @@ export default function Track({ song }) {
           <p className={styles.artist}>{song.artist}</p>
         </div>
         <div className={styles.trackButtonContainer}>
-          <input className={`${styles.trackButton} ${song.isInPlaylist ? styles.trackRemove : styles.trackAdd}`} type="button" value={song.isInPlaylist ? "-" : "+"} />
+          <input
+            className={`${styles.trackButton} ${
+              song.isInPlaylist ? styles.trackRemove : styles.trackAdd
+            }`}
+            type="button"
+            value={song.isInPlaylist ? '-' : '+'}
+            onClick={() => (song.isInPlaylist ? onRemove(song) : onAdd(song))}
+
+          />
         </div>
       </div>
-      <hr/>
+      <hr />
     </>
   );
 }
@@ -25,4 +33,6 @@ Track.propTypes = {
     isInPlaylist: PropTypes.bool,
     id: PropTypes.number,
   }).isRequired,
+  onAdd: PropTypes.func.isRequired,
+  onRemove: PropTypes.func.isRequired,
 };

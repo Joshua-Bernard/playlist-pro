@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
 
 import Track from '../Track/Track';
-export default function Tracklist({ songs }) {
+export default function Tracklist({ songs, onAdd, onRemove }) {
   return (
     <>
       {songs.map((song, index) => (
-        <Track song={song} key={index} />
+        <Track song={song} key={index} onAdd={onAdd} onRemove={onRemove} />
       ))}
     </>
   );
@@ -20,4 +20,6 @@ Tracklist.propTypes = {
       id: PropTypes.number.isRequired,
     })
   ).isRequired,
+  onAdd: PropTypes.func.isRequired,
+  onRemove: PropTypes.func.isRequired,
 };
