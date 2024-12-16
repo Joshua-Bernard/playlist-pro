@@ -2,10 +2,18 @@ import PropTypes from 'prop-types';
 import styles from './SearchResults.module.css';
 import Tracklist from '../Tracklist/Tracklist';
 export default function SearchResults({ songs }) {
+  const songsWithNewKey = songs.map((song) => ({
+    ...song,
+    isInPlaylist: false,
+  })
+);
+
+console.log(songsWithNewKey);
+
   return (
     <div className={styles.container}>
-      <Tracklist songs={songs} />
-      </div>
+      <Tracklist songs={songsWithNewKey} />
+    </div>
   );
 }
 
