@@ -20,6 +20,6 @@ Tracklist.propTypes = {
       id: PropTypes.number.isRequired,
     })
   ).isRequired,
-  onAdd: PropTypes.func.isRequired,
-  onRemove: PropTypes.func.isRequired,
+  onAdd: PropTypes.func,
+  onRemove: PropTypes.func,
 };

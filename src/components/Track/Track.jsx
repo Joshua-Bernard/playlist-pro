@@ -33,6 +33,6 @@ Track.propTypes = {
     isInPlaylist: PropTypes.bool,
     id: PropTypes.number,
   }).isRequired,
-  onAdd: PropTypes.func.isRequired,
-  onRemove: PropTypes.func.isRequired,
+  onAdd: PropTypes.func,
+  onRemove: PropTypes.func,
 };

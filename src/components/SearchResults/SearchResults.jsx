@@ -7,8 +7,6 @@ export default function SearchResults({ songs, onAdd }) {
     isInPlaylist: false,
   }));
 
-  console.log(songsWithNewKey);
-
   return (
     <div className={styles.container}>
       <Tracklist songs={songsWithNewKey} onAdd={onAdd} />
