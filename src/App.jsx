@@ -129,6 +129,7 @@ function App() {
   function handlePlaylistNameChange(e) {
     setPlaylistName(e.target.value);
   }
+  
   function handleSearchBarChange(e) {
     setSearch(e.target.value);
   }

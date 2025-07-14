@@ -87,7 +87,7 @@ small {
 
 @supports (-webkit-background-clip: text) {
 
-  /* Only for brousers that support it */
+  /* Only for browsers that support it */
   .titleHighlight {
     background: linear-gradient(to right, var(--primary), var(--accent));
     -webkit-background-clip: text;
