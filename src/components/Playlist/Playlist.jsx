@@ -1,6 +1,7 @@
 import styles from './Playlist.module.css';
 import Tracklist from '../Tracklist/Tracklist';
 import PropTypes from 'prop-types';
+import SavePlaylist from '../SavePlaylist/SavePlaylist';
 
 export default function Playlist({ playlist, onRemove }) {
   return (
@@ -8,6 +9,7 @@ export default function Playlist({ playlist, onRemove }) {
       <div className={styles.container}>
         <Tracklist songs={playlist} onRemove={onRemove} />
       </div>
+      <SavePlaylist />
     </>
   );
 }

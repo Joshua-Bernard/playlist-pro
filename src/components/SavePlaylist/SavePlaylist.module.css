@@ -1,0 +1,9 @@
+.saveButton {
+  grid-area: saveButton;
+  background-color: var(--primary);
+  align-self: flex-start;
+  justify-self: center;
+  padding: 1.2rem 4.4rem;
+  font-family: 'Roboto Mono', serif;
+  font-optical-sizing: auto;
+}
