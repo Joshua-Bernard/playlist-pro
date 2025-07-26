@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 import styles from './SearchBar.module.css';
 
-export default function SearchBar({ search, handleSearchBarChange }) {
+export default function SearchBar({ searchQuery, handleSearchBarChange }) {
   return (
     <>
       <h2 className={styles.searchTitle}>Search</h2>
@@ -12,7 +12,7 @@ export default function SearchBar({ search, handleSearchBarChange }) {
           id="search"
           type="text"
           onChange={handleSearchBarChange}
-          value={search}
+          value={searchQuery}
         />
         <svg
           className={styles.searchIcon}
@@ -35,5 +35,5 @@ export default function SearchBar({ search, handleSearchBarChange }) {
 
 SearchBar.propTypes = {
   handleSearchBarChange: PropTypes.func.isRequired,
-  search: PropTypes.string.isRequired,
+  searchQuery: PropTypes.string.isRequired,
 };

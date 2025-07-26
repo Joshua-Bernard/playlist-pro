@@ -1,10 +1,5 @@
 import styles from './SavePlaylist.module.css';
 
-
-export default function SavePlaylist() {
-
-    return (
-        <button className={styles.saveButton}>Save Playlist</button>
-    )
-
+export default function SavePlaylist({ savePlaylist }) {
+  return <button className={styles.saveButton} onClick={savePlaylist}>Save Playlist</button>;
 }

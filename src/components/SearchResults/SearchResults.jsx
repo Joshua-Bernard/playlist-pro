@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import styles from './SearchResults.module.css';
 import Tracklist from '../Tracklist/Tracklist';
-export default function SearchResults({ songs, onAdd }) {
-  const songsWithNewKey = songs.map((song) => ({
-    ...song,
+export default function SearchResults({ searchResults, onAdd }) {
+  const songsWithNewKey = searchResults.map((searchResult) => ({
+    ...searchResult,
     isInPlaylist: false,
   }));
 
@@ -15,12 +15,13 @@ export default function SearchResults({ songs, onAdd }) {
 }
 
 SearchResults.propTypes = {
-  songs: PropTypes.arrayOf(
+  searchResults: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string.isRequired,
       artist: PropTypes.string.isRequired,
       album: PropTypes.string,
-      id: PropTypes.number.isRequired,
+      id: PropTypes.string.isRequired,
+      uri: PropTypes.string.isRequired,
     })
   ).isRequired,
   onAdd: PropTypes.func.isRequired,
