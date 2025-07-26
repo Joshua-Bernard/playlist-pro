@@ -95,7 +95,6 @@ small {
     background-clip: text;
     -moz-background-clip: text;
     -moz-text-fill-color: transparent;
-    text-fill-color: transparent;
   }
 }
 
@@ -120,7 +119,7 @@ input:focus-visible {
 
 /* Target the scrollbar */
 ::-webkit-scrollbar {
-  /* width: 10px; Set the width of the scrollbar */
+  width: 60px;
 }
 
 /* Target the track (the background of the scrollbar) */
