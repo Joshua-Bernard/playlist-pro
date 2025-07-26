@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import styles from './Track.module.css';
-export default function Track({ song, onAdd, onRemove  }) {
+export default function Track({ song, onAdd, onRemove }) {
   return (
     <>
       <div className={styles.Track}>
@@ -16,7 +16,6 @@ export default function Track({ song, onAdd, onRemove  }) {
             type="button"
             value={song.isInPlaylist ? '-' : '+'}
             onClick={() => (song.isInPlaylist ? onRemove(song) : onAdd(song))}
-
           />
         </div>
       </div>
@@ -31,7 +30,8 @@ Track.propTypes = {
     artist: PropTypes.string.isRequired,
     album: PropTypes.string,
     isInPlaylist: PropTypes.bool,
-    id: PropTypes.number,
+    id: PropTypes.string,
+    uri: PropTypes.string.isRequired,
   }).isRequired,
   onAdd: PropTypes.func,
   onRemove: PropTypes.func,

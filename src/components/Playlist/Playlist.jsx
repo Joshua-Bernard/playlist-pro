@@ -26,4 +26,5 @@ Playlist.propTypes = {
     })
   ).isRequired,
   onRemove: PropTypes.func.isRequired,
+  savePlaylist: PropTypes.func.isRequired,
 };

@@ -9,7 +9,6 @@ let access_token = '';
 
 // 1. Code Challenge generation from a Code Verifier.
 function generateCodeVerifier(length) {
-  // JOSH THE ISSUE COULD BE THE BELOW TEXT VARABLE< THAT IS THE CODE VERABLE ABOVE< JUST A DIFFARNT NAME. MATCH THEM UP 
   let text = '';
   let possible =
     'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
